@@ -1,0 +1,15 @@
+openapi: 3.0.3
+info:
+  description: API Schema for DePay
+  title: DePay
+  version: 0.0.1
+servers:
+- url: /
+paths:
+  /v1/health:
+    get:
+      responses:
+        "200":
+          description: healthcheck
+components:
+  schemas: {}
