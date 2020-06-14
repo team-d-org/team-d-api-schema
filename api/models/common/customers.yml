@@ -1,0 +1,4 @@
+id:
+  properties:
+    id:
+      type: number

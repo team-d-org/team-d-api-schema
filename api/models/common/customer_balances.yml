@@ -1,0 +1,20 @@
+id:
+  properties:
+    id:
+      type: number
+customer_id:
+  properties:
+    customer_id:
+      type: number
+balance:
+  properties:
+    balance:
+      type: number
+created_at:
+  properties:
+    created_at:
+      type: number
+updated_at:
+  properties:
+    updated_at:
+      type: number
