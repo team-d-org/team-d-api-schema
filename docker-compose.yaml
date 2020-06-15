@@ -5,6 +5,6 @@ services:
     volumes:
       - ./api:/usr/share/nginx/html/api
     environment:
-      URLS: "[ { url: \"api/v1/customer/swagger.yml\", name: \"Customer API\" }, { url: \"api/v1/vendor/swagger.yml\", name: \"Vendor API\" } ]"
+      URLS: "[ { url: \"api/swagger.yml\", name: \"Common API\" }, { url: \"api/v1/customer/swagger.yml\", name: \"Customer API\" }, { url: \"api/v1/vendor/swagger.yml\", name: \"Vendor API\" } ]"
     ports:
       - "8080:8080"
