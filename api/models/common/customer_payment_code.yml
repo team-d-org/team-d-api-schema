@@ -1,0 +1,8 @@
+code:
+  properties:
+    code:
+      type: string
+created_at:
+  properties:
+    created_at:
+      type: number

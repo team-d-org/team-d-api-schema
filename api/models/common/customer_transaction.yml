@@ -1,0 +1,24 @@
+amount:
+  properties:
+    amount:
+      type: number
+balance:
+  properties:
+    balance:
+      type: number
+kind:
+  properties:
+    kind:
+      type: number
+type:
+  properties:
+    type:
+      type: number
+vendor_name:
+  properties:
+    vendor_name:
+      type: string
+created_at:
+  properties:
+    created_at:
+      type: number

@@ -1,0 +1,8 @@
+# 決済種類
+# 1: チャージ
+# 2: 支払い
+
+kind:
+  properties:
+    kind:
+      type: number
