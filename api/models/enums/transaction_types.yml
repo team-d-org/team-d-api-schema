@@ -2,9 +2,10 @@
 # customer_scan: カスタマーがベンダーのQRを読み取り
 # vendor_scan: カスタマーがQRを表示、ベンダーが読み取り
 
-definitions:
-  types:
-    type: string
-    enum: &types
-      - customer_scan
-      - vendor_scan
+types:
+  properties:
+    types:
+      type: string
+      enum:
+        - customer_scan
+        - vendor_scan

@@ -24,3 +24,5 @@ paths:
     $ref: './path/charges/index.yml'
   /payouts:
     $ref: './path/payouts/index.yml'
+  /transactions:
+    $ref: './path/transactions/index.yml'
