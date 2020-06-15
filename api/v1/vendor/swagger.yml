@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   version: 1.0.0
-  title: Customer API
+  title: Vendor API
 # servers: // set base url
 #   - url: /customer/
 #     description: Local
