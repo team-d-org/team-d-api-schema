@@ -2,9 +2,9 @@
 # charge: チャージ
 # pay: 支払い
 
-kinds:
+kind:
   properties:
-    kinds:
+    kind:
       type: string
       enum:
         - charge

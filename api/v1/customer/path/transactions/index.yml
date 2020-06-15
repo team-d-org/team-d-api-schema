@@ -20,8 +20,8 @@ get:
                 - $ref: '/api/models/common/customer_transaction.yml#/id'
                 - $ref: '/api/models/common/customer_transaction.yml#/amount'
                 - $ref: '/api/models/common/customer_transaction.yml#/balance'
-                - $ref: '/api/models/enums/transaction_kinds.yml#/kinds'
-                - $ref: '/api/models/enums/transaction_types.yml#/types'
+                - $ref: '/api/models/enums/transaction_kind.yml#/kind'
+                - $ref: '/api/models/enums/transaction_type.yml#/type'
                 - $ref: '/api/models/common/customer_transaction.yml#/vendor_name'
                 - $ref: '/api/models/common/customer_transaction.yml#/created_at'
     '400':
