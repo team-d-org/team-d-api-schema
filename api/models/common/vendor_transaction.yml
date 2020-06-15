@@ -1,11 +1,11 @@
 amount:
   properties:
     amount:
-      type: number
+      type: integer
 balance:
   properties:
     balance:
-      type: number
+      type: integer
 customer_name:
   properties:
     vendor_name:
@@ -13,8 +13,8 @@ customer_name:
 type:
   properties:
     type:
-      type: number
+      type: string
 created_at:
   properties:
     created_at:
-      type: number
+      type: integer

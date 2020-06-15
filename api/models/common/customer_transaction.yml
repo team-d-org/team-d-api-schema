@@ -1,19 +1,19 @@
 amount:
   properties:
     amount:
-      type: number
+      type: integer
 balance:
   properties:
     balance:
-      type: number
+      type: integer
 kind:
   properties:
     kind:
-      type: number
+      type: string
 type:
   properties:
     type:
-      type: number
+      type: string
 vendor_name:
   properties:
     vendor_name:
@@ -21,4 +21,4 @@ vendor_name:
 created_at:
   properties:
     created_at:
-      type: number
+      type: integer

@@ -5,4 +5,4 @@ code:
 created_at:
   properties:
     created_at:
-      type: number
+      type: integer
