@@ -22,3 +22,5 @@ paths:
     $ref: './path/balance/index.yml'
   /charges:
     $ref: './path/charges/index.yml'
+  /payouts:
+    $ref: './path/payouts/index.yml'

@@ -1,7 +1,7 @@
 post:
-  summary: 残高のチャージ
+  summary: 支払い
   tags:
-    - charges
+    - payouts
   parameters:
     - in: header
       name: X-Auth-Token
@@ -10,10 +10,9 @@ post:
       required: true
     - in: body
       schema:
-        properties:
-          code:
-            type: string
-            description: 'serial code'
+        allOf:
+          - $ref: '/api/models/common/customer_payment_code.yml#/code'
+          - $ref: '/api/models/common/customer_transaction.yml#/amount'
   responses:
     '200':
       description: OK
@@ -22,6 +21,7 @@ post:
           - $ref: '/api/models/common/customer_transaction.yml#/id'
           - $ref: '/api/models/common/customer_transaction.yml#/amount'
           - $ref: '/api/models/common/customer_transaction.yml#/balance'
+          - $ref: '/api/models/common/customer_transaction.yml#/vendor_name'
           - $ref: '/api/models/common/customer_transaction.yml#/created_at'
     '400':
       $ref: '/api/v1/customer/responses.yml#/400'
@@ -30,4 +30,4 @@ post:
     '404':
       $ref: '/api/v1/customer/responses.yml#/404'
     '502':
-      $ref: '/api/v1/customer/responses.yml#/502'
+      $ref: '/api/v1/customer/responses.yml#/502' 
