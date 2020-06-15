@@ -1,3 +1,7 @@
+id:
+  properties:
+    id:
+      type: integer
 amount:
   properties:
     amount:
@@ -10,10 +14,12 @@ customer_name:
   properties:
     vendor_name:
       type: string
+# enum
 type:
   properties:
     type:
       type: string
+# unixtime
 created_at:
   properties:
     created_at:
