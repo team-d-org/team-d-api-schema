@@ -11,7 +11,7 @@ post:
     - in: body
       schema:
         allOf:
-          - $ref: '/api/models/common/customer_payment_code.yml#/code'
+          - $ref: '/api/models/common/vendor.yml#/payment_code'
           - $ref: '/api/models/common/customer_transaction.yml#/amount'
   responses:
     '200':
