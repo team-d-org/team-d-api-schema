@@ -2,9 +2,10 @@ swagger: "2.0"
 info:
   version: 1.0.0
   title: Vendor API
-# servers: // set base url
-#   - url: /customer/
-#     description: Local
+consumes:
+  - application/json
+produces:
+  - application/json
 tags:
   # tags
 paths:
