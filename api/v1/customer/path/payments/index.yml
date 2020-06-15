@@ -1,7 +1,7 @@
 post:
   summary: 支払い
   tags:
-    - payouts
+    - payments
   parameters:
     - in: header
       name: X-Auth-Token

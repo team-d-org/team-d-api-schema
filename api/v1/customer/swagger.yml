@@ -13,7 +13,7 @@ tags:
     description: 残高
   - name: charges
     description: チャージ
-  - name: payouts
+  - name: payments
     description: 支払い
   - name: transactions
     description: 取引履歴
@@ -26,7 +26,7 @@ paths:
     $ref: './path/balance/index.yml'
   /charges:
     $ref: './path/charges/index.yml'
-  /payouts:
-    $ref: './path/payouts/index.yml'
+  /payments:
+    $ref: './path/payments/index.yml'
   /transactions:
     $ref: './path/transactions/index.yml'
