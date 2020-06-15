@@ -20,3 +20,5 @@ tags:
 paths:
   /balance:
     $ref: './path/balance/index.yml'
+  /charges:
+    $ref: './path/charges/index.yml'
