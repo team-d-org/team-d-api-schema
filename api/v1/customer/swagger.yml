@@ -1,0 +1,20 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Customer API
+# servers: // set base url
+#   - url: /customer/
+#     description: Local
+tags:
+  # tags
+paths:
+  # paths
+# components: security...?
+#   securitySchemes:
+#     basicAuth:
+#         type: http
+#         scheme: basic
+#     cookieAuth:
+#         type: apiKey
+#         in: header
+#         name: _depay
