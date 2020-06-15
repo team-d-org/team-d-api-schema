@@ -18,6 +18,10 @@ tags:
   - name: transactions
     description: 取引履歴
 paths:
+  /auth/signup:
+    $ref: './path/auth/signup.yml'
+  /auth/signin:
+    $ref: './path/auth/signin.yml'
   /balance:
     $ref: './path/balance/index.yml'
   /charges:
