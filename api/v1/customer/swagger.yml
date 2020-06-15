@@ -7,15 +7,16 @@ consumes:
 produces:
   - application/json
 tags:
-  # tags
+  - name: auth
+    description: 認証
+  - name: balance
+    description: 残高
+  - name: charges
+    description: チャージ
+  - name: payouts
+    description: 支払い
+  - name: transactions
+    description: 取引履歴
 paths:
-  # paths
-# components: security...?
-#   securitySchemes:
-#     basicAuth:
-#         type: http
-#         scheme: basic
-#     cookieAuth:
-#         type: apiKey
-#         in: header
-#         name: _depay
+  /balance:
+    $ref: './path/balance/index.yml'
