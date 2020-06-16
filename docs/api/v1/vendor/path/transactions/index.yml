@@ -1,0 +1,33 @@
+get:
+  summary: 取引履歴の一覧の取得
+  tags:
+    - transactions
+  parameters:
+    - in: header
+      name: X-Auth-Token
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      schema:
+        properties:
+          transactions:
+            type: array
+            items:
+              allOf:
+                - $ref: '/api/models/common/vendor_transaction.yml#/id'
+                - $ref: '/api/models/common/vendor_transaction.yml#/amount'
+                - $ref: '/api/models/common/vendor_transaction.yml#/balance'
+                - $ref: '/api/models/enums/transaction_type.yml#/type'
+                - $ref: '/api/models/common/vendor_transaction.yml#/customer_name'
+                - $ref: '/api/models/common/vendor_transaction.yml#/created_at'
+    '400':
+      $ref: '/api/v1/vendor/responses.yml#/400'
+    '401':
+      $ref: '/api/v1/vendor/responses.yml#/401'
+    '404':
+      $ref: '/api/v1/vendor/responses.yml#/404'
+    '502':
+      $ref: '/api/v1/vendor/responses.yml#/502'
