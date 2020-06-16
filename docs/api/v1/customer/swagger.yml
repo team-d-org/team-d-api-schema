@@ -18,15 +18,15 @@ tags:
   - name: transactions
     description: 取引履歴
 paths:
-  /auth/signup:
+  /v1/customer/auth/signup:
     $ref: './path/auth/signup.yml'
-  /auth/signin:
+  /v1/customer/auth/signin:
     $ref: './path/auth/signin.yml'
-  /balance:
+  /v1/customer/balance:
     $ref: './path/balance/index.yml'
-  /charges:
+  /v1/customer/charges:
     $ref: './path/charges/index.yml'
-  /payments:
+  /v1/customer/payments:
     $ref: './path/payments/index.yml'
-  /transactions:
+  /v1/customer/transactions:
     $ref: './path/transactions/index.yml'
