@@ -1,0 +1,8 @@
+balance:
+  properties:
+    balance:
+      type: integer
+name:
+  properties:
+    name:
+      type: string

@@ -3,7 +3,7 @@ services:
   swagger:
     image: swaggerapi/swagger-ui
     volumes:
-      - ./api:/usr/share/nginx/html/api
+      - ./docs/api:/usr/share/nginx/html/api
     environment:
       URLS: "[ { url: \"api/swagger.yml\", name: \"Common API\" }, { url: \"api/v1/customer/swagger.yml\", name: \"Customer API\" }, { url: \"api/v1/vendor/swagger.yml\", name: \"Vendor API\" } ]"
     ports:

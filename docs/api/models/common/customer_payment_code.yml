@@ -1,0 +1,9 @@
+code:
+  properties:
+    code:
+      type: string
+# unixtime
+created_at:
+  properties:
+    created_at:
+      type: integer
