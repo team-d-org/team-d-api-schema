@@ -1,0 +1,24 @@
+get:
+  summary: 残高の取得
+  tags:
+    - balance
+  parameters:
+    - in: header
+      name: X-Auth-Token
+      schema:
+        type: string
+      required: true
+  responses:
+    '200':
+      description: OK
+      schema:
+        allOf:
+          - $ref: '/api/models/common/customer.yml#/balance'
+    '400':
+      $ref: '/api/v1/customer/responses.yml#/400'
+    '401':
+      $ref: '/api/v1/customer/responses.yml#/401'
+    '404':
+      $ref: '/api/v1/customer/responses.yml#/404'
+    '502':
+      $ref: '/api/v1/customer/responses.yml#/502' 
