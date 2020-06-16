@@ -5,10 +5,11 @@ post:
   parameters:
     - in: header
       name: X-Auth-Token
+      required: true
       schema:
         type: string
-      required: true
     - in: body
+      required: true
       schema:
         allOf:
           - $ref: '/api/models/common/customer.yml#/name'

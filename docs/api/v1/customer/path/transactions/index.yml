@@ -4,10 +4,10 @@ get:
     - transactions
   parameters:
     - in: header
+      required: true
       name: X-Auth-Token
       schema:
         type: string
-      required: true
   responses:
     '200':
       description: OK

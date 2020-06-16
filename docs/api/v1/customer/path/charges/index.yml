@@ -4,11 +4,12 @@ post:
     - charges
   parameters:
     - in: header
+      required: true
       name: X-Auth-Token
       schema:
         type: string
-      required: true
     - in: body
+      required: true
       schema:
         properties:
           code:
