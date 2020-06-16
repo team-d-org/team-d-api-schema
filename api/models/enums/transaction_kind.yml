@@ -1,0 +1,11 @@
+# 決済種類
+# charge: チャージ
+# pay: 支払い
+
+kind:
+  properties:
+    kind:
+      type: string
+      enum:
+        - charge
+        - pay

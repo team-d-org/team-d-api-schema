@@ -1,0 +1,32 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Customer API
+consumes:
+  - application/json
+produces:
+  - application/json
+tags:
+  - name: auth
+    description: 認証
+  - name: balance
+    description: 残高
+  - name: charges
+    description: チャージ
+  - name: payments
+    description: 支払い
+  - name: transactions
+    description: 取引履歴
+paths:
+  /auth/signup:
+    $ref: './path/auth/signup.yml'
+  /auth/signin:
+    $ref: './path/auth/signin.yml'
+  /balance:
+    $ref: './path/balance/index.yml'
+  /charges:
+    $ref: './path/charges/index.yml'
+  /payments:
+    $ref: './path/payments/index.yml'
+  /transactions:
+    $ref: './path/transactions/index.yml'
