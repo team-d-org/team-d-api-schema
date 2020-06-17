@@ -1,14 +1,14 @@
 post:
-  summary: サインアップ
+  summary: ベンダー サインアップ
   tags:
     - auth
   parameters:
-    - in: header
-      name: X-Auth-Token
+    - name: X-Auth-Token
+      in: header
       required: true
-      schema:
-        type: string
-    - in: body
+      type: string
+    - name: body
+      in: body
       required: true
       schema:
         allOf:
@@ -21,12 +21,12 @@ post:
           - $ref: '../../../../models/common/vendor.yml#/name'
           - $ref: '../../../../models/common/vendor.yml#/payment_code'
     '400':
-      $ref: '../../responses.yml#/400'
+      $ref: '../../../../responses.yml#/400'
     '401':
-      $ref: '../../responses.yml#/401'
+      $ref: '../../../../responses.yml#/401'
     '404':
-      $ref: '../../responses.yml#/404'
+      $ref: '../../../../responses.yml#/404'
     '500':
-      $ref: '../../responses.yml#/500'
+      $ref: '../../../../responses.yml#/500'
     '502':
-      $ref: '../../responses.yml#/502'
+      $ref: '../../../../responses.yml#/502'
