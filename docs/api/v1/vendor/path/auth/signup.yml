@@ -5,10 +5,11 @@ post:
   parameters:
     - in: header
       name: X-Auth-Token
+      required: true
       schema:
         type: string
-      required: true
     - in: body
+      required: true
       schema:
         allOf:
           - $ref: '/api/models/common/vendor.yml#/name'
@@ -25,5 +26,7 @@ post:
       $ref: '/api/v1/vendor/responses.yml#/401'
     '404':
       $ref: '/api/v1/vendor/responses.yml#/404'
+    '500':
+      $ref: '/api/v1/vendor/responses.yml#/500'
     '502':
       $ref: '/api/v1/vendor/responses.yml#/502'

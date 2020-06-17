@@ -20,5 +20,7 @@ get:
       $ref: '/api/v1/vendor/responses.yml#/401'
     '404':
       $ref: '/api/v1/vendor/responses.yml#/404'
+    '500':
+      $ref: '/api/v1/vendor/responses.yml#/500'
     '502':
-      $ref: '/api/v1/vendor/responses.yml#/502' 
+      $ref: '/api/v1/vendor/responses.yml#/502'
