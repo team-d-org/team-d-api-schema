@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   version: 1.0.0
-  title: Customer API
+  title: Vendor API
 consumes:
   - application/json
 produces:
@@ -11,22 +11,18 @@ tags:
     description: 認証
   - name: balance
     description: 残高
-  - name: charges
-    description: チャージ
   - name: payments
     description: 支払い
   - name: transactions
     description: 取引履歴
 paths:
-  /auth/signup:
+  /v1/vendor/auth/signup:
     $ref: './path/auth/signup.yml'
-  /auth/signin:
+  /v1/vendor/auth/signin:
     $ref: './path/auth/signin.yml'
-  /balance:
+  /v1/vendor/balance:
     $ref: './path/balance/index.yml'
-  /charges:
-    $ref: './path/charges/index.yml'
-  /payments:
+  /v1/vendor/payments:
     $ref: './path/payments/index.yml'
-  /transactions:
+  /v1/vendor/transactions:
     $ref: './path/transactions/index.yml'

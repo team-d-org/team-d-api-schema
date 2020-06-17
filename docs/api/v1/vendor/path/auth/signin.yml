@@ -1,0 +1,27 @@
+post:
+  summary: サインイン
+  tags:
+    - auth
+  parameters:
+    - in: header
+      name: X-Auth-Token
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      schema:
+        allOf:
+          - $ref: '/api/models/common/vendor.yml#/name'
+          - $ref: '/api/models/common/vendor.yml#/payment_code'
+    '400':
+      $ref: '/api/v1/vendor/responses.yml#/400'
+    '401':
+      $ref: '/api/v1/vendor/responses.yml#/401'
+    '404':
+      $ref: '/api/v1/vendor/responses.yml#/404'
+    '500':
+      $ref: '/api/v1/vendor/responses.yml#/500'
+    '502':
+      $ref: '/api/v1/vendor/responses.yml#/502'
