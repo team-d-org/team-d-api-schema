@@ -4,8 +4,8 @@ get:
     - transactions
   parameters:
     - in: header
-      required: true
       name: X-Auth-Token
+      required: true
       schema:
         type: string
   responses:
@@ -17,13 +17,12 @@ get:
             type: array
             items:
               allOf:
-                - $ref: '../../../../models/common/customer_transaction.yml#/id'
-                - $ref: '../../../../models/common/customer_transaction.yml#/amount'
-                - $ref: '../../../../models/common/customer_transaction.yml#/balance'
-                - $ref: '../../../../models/enums/transaction_kind.yml#/kind'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/id'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/amount'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/balance'
                 - $ref: '../../../../models/enums/transaction_type.yml#/type'
-                - $ref: '../../../../models/common/customer_transaction.yml#/vendor_name'
-                - $ref: '../../../../models/common/customer_transaction.yml#/created_at'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/customer_name'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/created_at'
     '400':
       $ref: '../../responses.yml#/400'
     '401':

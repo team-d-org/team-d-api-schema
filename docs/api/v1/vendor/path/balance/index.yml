@@ -4,8 +4,8 @@ get:
     - balance
   parameters:
     - in: header
-      required: true
       name: X-Auth-Token
+      required: true
       schema:
         type: string
   responses:
@@ -13,7 +13,7 @@ get:
       description: OK
       schema:
         allOf:
-          - $ref: '../../../../models/common/customer.yml#/balance'
+          - $ref: '../../../../models/common/vendor.yml#/balance'
     '400':
       $ref: '../../responses.yml#/400'
     '401':
@@ -23,4 +23,4 @@ get:
     '500':
       $ref: '../../responses.yml#/500'
     '502':
-      $ref: '../../responses.yml#/502' 
+      $ref: '../../responses.yml#/502'
