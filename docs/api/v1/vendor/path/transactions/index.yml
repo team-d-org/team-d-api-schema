@@ -16,13 +16,7 @@ get:
           transactions:
             type: array
             items:
-              allOf:
-                - $ref: '../../../../models/common/vendor_transaction.yml#/id'
-                - $ref: '../../../../models/common/vendor_transaction.yml#/amount'
-                - $ref: '../../../../models/common/vendor_transaction.yml#/balance'
-                - $ref: '../../../../models/enums/transaction_type.yml#/type'
-                - $ref: '../../../../models/common/vendor_transaction.yml#/customer_name'
-                - $ref: '../../../../models/common/vendor_transaction.yml#/created_at'
+              $ref: '../../models/common/vendor_transaction.yml#/all'
     '400':
       $ref: '../../responses.yml#/400'
     '401':

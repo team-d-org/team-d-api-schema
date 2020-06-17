@@ -24,3 +24,22 @@ created_at:
   properties:
     created_at:
       type: integer
+
+# for array
+all:
+  type: object
+  properties:
+    id:
+      type: integer
+    amount:
+      type: integer
+    balance:
+      type: integer
+    customer_name:
+      type: string
+    # enum
+    type:
+      type: string
+     # unixtime
+    created_at:
+      type: integer
