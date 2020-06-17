@@ -1,13 +1,12 @@
 get:
-  summary: 取引履歴の一覧の取得
+  summary: カスタマー 取引履歴の一覧の取得
   tags:
     - transactions
   parameters:
-    - in: header
+    - name: X-Auth-Token
+      in: header
       required: true
-      name: X-Auth-Token
-      schema:
-        type: string
+      type: string
   responses:
     '200':
       description: OK
@@ -16,14 +15,14 @@ get:
           transactions:
             type: array
             items:
-              $ref: '../../models/common/customer_transaction.yml#/all'
+              $ref: '../../../../models/common/customer_transaction.yml#/all'
     '400':
-      $ref: '../../responses.yml#/400'
+      $ref: '../../../../responses.yml#/400'
     '401':
-      $ref: '../../responses.yml#/401'
+      $ref: '../../../../responses.yml#/401'
     '404':
-      $ref: '../../responses.yml#/404'
+      $ref: '../../../../responses.yml#/404'
     '500':
-      $ref: '../../responses.yml#/500'
+      $ref: '../../../../responses.yml#/500'
     '502':
-      $ref: '../../responses.yml#/502'
+      $ref: '../../../../responses.yml#/502'

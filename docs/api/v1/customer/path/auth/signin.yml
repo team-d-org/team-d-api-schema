@@ -1,26 +1,25 @@
 post:
-  summary: サインイン
+  summary: カスタマー サインイン
   tags:
     - auth
   parameters:
-    - in: header
-      name: X-Auth-Token
-      schema:
-        type: string
+    - name: X-Auth-Token
+      in: header
+      type: string
       required: true
   responses:
     '200':
       description: OK
       schema:
         allOf:
-          - $ref: '../../models/common/customer.yml#/name'
+          - $ref: '../../../../models/common/customer.yml#/name'
     '400':
-      $ref: '../../responses.yml#/400'
+      $ref: '../../../../responses.yml#/400'
     '401':
-      $ref: '../../responses.yml#/401'
+      $ref: '../../../../responses.yml#/401'
     '404':
-      $ref: '../../responses.yml#/404'
+      $ref: '../../../../responses.yml#/404'
     '500':
-      $ref: '../../responses.yml#/500'
+      $ref: '../../../../responses.yml#/500'
     '502':
-      $ref: '../../responses.yml#/502'
+      $ref: '../../../../responses.yml#/502'

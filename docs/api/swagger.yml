@@ -1,10 +1,49 @@
 swagger: "2.0"
 info:
   version: 1.0.0
-  title: Common API
+  title: DePay API
+consumes:
+  - application/json
+produces:
+  - application/json
+tags:
+  - name: auth
+    description: 認証
+  - name: balance
+    description: 残高
+  - name: charges
+    description: チャージ
+  - name: payments
+    description: 支払い
+  - name: transactions
+    description: 取引履歴
 paths:
   /health:
     get:
       responses:
         '200':
           description: OK
+# customer
+  /v1/customer/auth/signup:
+    $ref: './v1/customer/path/auth/signup.yml'
+  /v1/customer/auth/signin:
+    $ref: './v1/customer/path/auth/signin.yml'
+  /v1/customer/balance:
+    $ref: './v1/customer/path/balance/index.yml'
+  /v1/customer/charges:
+    $ref: './v1/customer/path/charges/index.yml'
+  /v1/customer/payments:
+    $ref: './v1/customer/path/payments/index.yml'
+  /v1/customer/transactions:
+    $ref: './v1/customer/path/transactions/index.yml'
+# vendor
+  /v1/vendor/auth/signup:
+    $ref: './v1/vendor/path/auth/signup.yml'
+  /v1/vendor/auth/signin:
+    $ref: './v1/vendor/path/auth/signin.yml'
+  /v1/vendor/balance:
+    $ref: './v1/vendor/path/balance/index.yml'
+  /v1/vendor/payments:
+    $ref: './v1/vendor/path/payments/index.yml'
+  /v1/vendor/transactions:
+    $ref: './v1/vendor/path/transactions/index.yml'
