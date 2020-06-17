@@ -17,19 +17,19 @@ get:
             type: array
             items:
               allOf:
-                - $ref: '/api/models/common/vendor_transaction.yml#/id'
-                - $ref: '/api/models/common/vendor_transaction.yml#/amount'
-                - $ref: '/api/models/common/vendor_transaction.yml#/balance'
-                - $ref: '/api/models/enums/transaction_type.yml#/type'
-                - $ref: '/api/models/common/vendor_transaction.yml#/customer_name'
-                - $ref: '/api/models/common/vendor_transaction.yml#/created_at'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/id'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/amount'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/balance'
+                - $ref: '../../../../models/enums/transaction_type.yml#/type'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/customer_name'
+                - $ref: '../../../../models/common/vendor_transaction.yml#/created_at'
     '400':
-      $ref: '/api/v1/vendor/responses.yml#/400'
+      $ref: '../../responses.yml#/400'
     '401':
-      $ref: '/api/v1/vendor/responses.yml#/401'
+      $ref: '../../responses.yml#/401'
     '404':
-      $ref: '/api/v1/vendor/responses.yml#/404'
+      $ref: '../../responses.yml#/404'
     '500':
-      $ref: '/api/v1/vendor/responses.yml#/500'
+      $ref: '../../responses.yml#/500'
     '502':
-      $ref: '/api/v1/vendor/responses.yml#/502'
+      $ref: '../../responses.yml#/502'

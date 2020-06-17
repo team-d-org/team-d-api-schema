@@ -12,25 +12,25 @@ post:
       required: true
       schema:
         allOf:
-          - $ref: '/api/models/common/vendor.yml#/payment_code'
-          - $ref: '/api/models/common/customer_transaction.yml#/amount'
+          - $ref: '../../../../models/common/vendor.yml#/payment_code'
+          - $ref: '../../../../models/common/customer_transaction.yml#/amount'
   responses:
     '200':
       description: OK
       schema:
         allOf:
-          - $ref: '/api/models/common/customer_transaction.yml#/id'
-          - $ref: '/api/models/common/customer_transaction.yml#/amount'
-          - $ref: '/api/models/common/customer_transaction.yml#/balance'
-          - $ref: '/api/models/common/customer_transaction.yml#/vendor_name'
-          - $ref: '/api/models/common/customer_transaction.yml#/created_at'
+          - $ref: '../../../../models/common/customer_transaction.yml#/id'
+          - $ref: '../../../../models/common/customer_transaction.yml#/amount'
+          - $ref: '../../../../models/common/customer_transaction.yml#/balance'
+          - $ref: '../../../../models/common/customer_transaction.yml#/vendor_name'
+          - $ref: '../../../../models/common/customer_transaction.yml#/created_at'
     '400':
-      $ref: '/api/v1/customer/responses.yml#/400'
+      $ref: '../../responses.yml#/400'
     '401':
-      $ref: '/api/v1/customer/responses.yml#/401'
+      $ref: '../../responses.yml#/401'
     '404':
-      $ref: '/api/v1/customer/responses.yml#/404'
+      $ref: '../../responses.yml#/404'
     '500':
-      $ref: '/api/v1/customer/responses.yml#/500'
+      $ref: '../../responses.yml#/500'
     '502':
-      $ref: '/api/v1/customer/responses.yml#/502' 
+      $ref: '../../responses.yml#/502'
