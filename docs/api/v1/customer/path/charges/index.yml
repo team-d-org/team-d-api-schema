@@ -20,10 +20,10 @@ post:
       description: OK
       schema:
         allOf:
-          - $ref: '../../../../models/common/customer_transaction.yml#/id'
-          - $ref: '../../../../models/common/customer_transaction.yml#/amount'
-          - $ref: '../../../../models/common/customer_transaction.yml#/balance'
-          - $ref: '../../../../models/common/customer_transaction.yml#/created_at'
+          - $ref: '../../models/common/customer_transaction.yml#/id'
+          - $ref: '../../models/common/customer_transaction.yml#/amount'
+          - $ref: '../../models/common/customer_transaction.yml#/balance'
+          - $ref: '../../models/common/customer_transaction.yml#/created_at'
     '400':
       $ref: '../../responses.yml#/400'
     '401':

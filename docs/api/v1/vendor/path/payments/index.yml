@@ -12,18 +12,18 @@ post:
       required: true
       schema:
         allOf:
-          - $ref: '../../../../models/common/customer_payment_code.yml#/code'
-          - $ref: '../../../../models/common/vendor_transaction.yml#/amount'
+          - $ref: '../../models/common/customer_payment_code.yml#/code'
+          - $ref: '../../models/common/vendor_transaction.yml#/amount'
   responses:
     '200':
       description: OK
       schema:
         allOf:
-          - $ref: '../../../../models/common/vendor_transaction.yml#/id'
-          - $ref: '../../../../models/common/vendor_transaction.yml#/amount'
-          - $ref: '../../../../models/common/vendor_transaction.yml#/balance'
-          - $ref: '../../../../models/common/vendor_transaction.yml#/customer_name'
-          - $ref: '../../../../models/common/vendor_transaction.yml#/created_at'
+          - $ref: '../../models/common/vendor_transaction.yml#/id'
+          - $ref: '../../models/common/vendor_transaction.yml#/amount'
+          - $ref: '../../models/common/vendor_transaction.yml#/balance'
+          - $ref: '../../models/common/vendor_transaction.yml#/customer_name'
+          - $ref: '../../models/common/vendor_transaction.yml#/created_at'
     '400':
       $ref: '../../responses.yml#/400'
     '401':

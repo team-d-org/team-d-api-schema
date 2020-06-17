@@ -12,13 +12,13 @@ post:
       required: true
       schema:
         allOf:
-          - $ref: '../../../../models/common/customer.yml#/name'
+          - $ref: '../../models/common/customer.yml#/name'
   responses:
     '200':
       description: OK
       schema:
         allOf:
-          - $ref: '../../../../models/common/customer.yml#/name'
+          - $ref: '../../models/common/customer.yml#/name'
     '400':
       $ref: '../../responses.yml#/400'
     '401':

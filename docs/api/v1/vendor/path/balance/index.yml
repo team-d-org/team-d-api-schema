@@ -13,7 +13,7 @@ get:
       description: OK
       schema:
         allOf:
-          - $ref: '../../../../models/common/vendor.yml#/balance'
+          - $ref: '../../models/common/vendor.yml#/balance'
     '400':
       $ref: '../../responses.yml#/400'
     '401':
