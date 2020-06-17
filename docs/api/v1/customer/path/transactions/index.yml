@@ -11,19 +11,12 @@ get:
   responses:
     '200':
       description: OK
-      # schema:
-      #   properties:
-      #     transactions:
-      #       type: array
-      #       items:
-      #         allOf:
-      #           - $ref: '../../models/common/customer_transaction.yml#/id'
-      #           - $ref: '../../models/common/customer_transaction.yml#/amount'
-      #           - $ref: '../../models/common/customer_transaction.yml#/balance'
-      #           - $ref: '../../models/enums/transaction_kind.yml#/kind'
-      #           - $ref: '../../models/enums/transaction_type.yml#/type'
-      #           - $ref: '../../models/common/customer_transaction.yml#/vendor_name'
-      #           - $ref: '../../models/common/customer_transaction.yml#/created_at'
+      schema:
+        properties:
+          transactions:
+            type: array
+            items:
+              $ref: '../../models/common/customer_transaction.yml#/all'
     '400':
       $ref: '../../responses.yml#/400'
     '401':

@@ -10,6 +10,7 @@ balance:
   properties:
     balance:
       type: integer
+
 # enum
 kind:
   properties:
@@ -27,5 +28,27 @@ vendor_name:
 # unixtime
 created_at:
   properties:
+    created_at:
+      type: integer
+
+# for array
+all:
+  type: object
+  properties:
+    id:
+      type: integer
+    amount:
+      type: integer
+    balance:
+      type: integer
+    # enum
+    kind:
+      type: string
+    # enum
+    type:
+      type: string
+    vendor_name:
+      type: string
+    # unixtime
     created_at:
       type: integer
