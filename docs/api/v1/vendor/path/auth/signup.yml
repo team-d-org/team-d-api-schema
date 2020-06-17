@@ -1,5 +1,5 @@
 post:
-  summary: サインアップ
+  summary: ベンダー サインアップ
   tags:
     - auth
   parameters:
@@ -12,21 +12,21 @@ post:
       required: true
       schema:
         allOf:
-          - $ref: '../../models/common/vendor.yml#/name'
+          - $ref: '../../../../models/common/vendor.yml#/name'
   responses:
     '200':
       description: OK
       schema:
         allOf:
-          - $ref: '../../models/common/vendor.yml#/name'
-          - $ref: '../../models/common/vendor.yml#/payment_code'
+          - $ref: '../../../../models/common/vendor.yml#/name'
+          - $ref: '../../../../models/common/vendor.yml#/payment_code'
     '400':
-      $ref: '../../responses.yml#/400'
+      $ref: '../../../../responses.yml#/400'
     '401':
-      $ref: '../../responses.yml#/401'
+      $ref: '../../../../responses.yml#/401'
     '404':
-      $ref: '../../responses.yml#/404'
+      $ref: '../../../../responses.yml#/404'
     '500':
-      $ref: '../../responses.yml#/500'
+      $ref: '../../../../responses.yml#/500'
     '502':
-      $ref: '../../responses.yml#/502'
+      $ref: '../../../../responses.yml#/502'

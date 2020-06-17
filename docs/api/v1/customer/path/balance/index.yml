@@ -1,5 +1,5 @@
 get:
-  summary: 残高の取得
+  summary: カスタマー 残高の取得
   tags:
     - balance
   parameters:
@@ -13,14 +13,14 @@ get:
       description: OK
       schema:
         allOf:
-          - $ref: '../../models/common/customer.yml#/balance'
+          - $ref: '../../../../models/common/customer.yml#/balance'
     '400':
-      $ref: '../../responses.yml#/400'
+      $ref: '../../../../responses.yml#/400'
     '401':
-      $ref: '../../responses.yml#/401'
+      $ref: '../../../../responses.yml#/401'
     '404':
-      $ref: '../../responses.yml#/404'
+      $ref: '../../../../responses.yml#/404'
     '500':
-      $ref: '../../responses.yml#/500'
+      $ref: '../../../../responses.yml#/500'
     '502':
-      $ref: '../../responses.yml#/502' 
+      $ref: '../../../../responses.yml#/502' 

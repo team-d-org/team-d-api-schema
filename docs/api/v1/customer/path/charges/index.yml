@@ -1,5 +1,5 @@
 post:
-  summary: 残高のチャージ
+  summary: カスタマー 残高のチャージ
   tags:
     - charges
   parameters:
@@ -20,17 +20,17 @@ post:
       description: OK
       schema:
         allOf:
-          - $ref: '../../models/common/customer_transaction.yml#/id'
-          - $ref: '../../models/common/customer_transaction.yml#/amount'
-          - $ref: '../../models/common/customer_transaction.yml#/balance'
-          - $ref: '../../models/common/customer_transaction.yml#/created_at'
+          - $ref: '../../../../models/common/customer_transaction.yml#/id'
+          - $ref: '../../../../models/common/customer_transaction.yml#/amount'
+          - $ref: '../../../../models/common/customer_transaction.yml#/balance'
+          - $ref: '../../../../models/common/customer_transaction.yml#/created_at'
     '400':
-      $ref: '../../responses.yml#/400'
+      $ref: '../../../../responses.yml#/400'
     '401':
-      $ref: '../../responses.yml#/401'
+      $ref: '../../../../responses.yml#/401'
     '404':
-      $ref: '../../responses.yml#/404'
+      $ref: '../../../../responses.yml#/404'
     '500':
-      $ref: '../../responses.yml#/500'
+      $ref: '../../../../responses.yml#/500'
     '502':
-      $ref: '../../responses.yml#/502'
+      $ref: '../../../../responses.yml#/502'
