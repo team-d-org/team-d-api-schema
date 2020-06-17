@@ -3,11 +3,10 @@ get:
   tags:
     - transactions
   parameters:
-    - in: header
+    - name: X-Auth-Token
+      in: header
       required: true
-      name: X-Auth-Token
-      schema:
-        type: string
+      type: string
   responses:
     '200':
       description: OK

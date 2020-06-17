@@ -3,10 +3,9 @@ post:
   tags:
     - auth
   parameters:
-    - in: header
-      name: X-Auth-Token
-      schema:
-        type: string
+    - name: X-Auth-Token
+      in: header
+      type: string
       required: true
   responses:
     '200':

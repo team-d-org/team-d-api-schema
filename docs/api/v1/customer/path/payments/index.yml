@@ -3,12 +3,12 @@ post:
   tags:
     - payments
   parameters:
-    - in: header
+    - name: X-Auth-Token
+      in: header
       required: true
-      name: X-Auth-Token
-      schema:
-        type: string
-    - in: body
+      type: string
+    - name: body
+      in: body
       required: true
       schema:
         allOf:
