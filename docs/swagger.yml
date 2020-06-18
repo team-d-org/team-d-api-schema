@@ -1,0 +1,448 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: DePay API
+consumes:
+  - application/json
+produces:
+  - application/json
+tags:
+  - name: auth
+    description: 認証
+  - name: balance
+    description: 残高
+  - name: charges
+    description: チャージ
+  - name: payments
+    description: 支払い
+  - name: transactions
+    description: 取引履歴
+paths:
+  /health:
+    get:
+      responses:
+        '200':
+          description: OK
+  /v1/customer/auth/signup:
+    post:
+      summary: カスタマー サインアップ
+      tags:
+        - auth
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            allOf:
+              - properties:
+                  name:
+                    type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  name:
+                    type: string
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/customer/auth/signin:
+    post:
+      summary: カスタマー サインイン
+      tags:
+        - auth
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  name:
+                    type: string
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/customer/balance:
+    get:
+      summary: カスタマー 残高の取得
+      tags:
+        - balance
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  balance:
+                    type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/customer/charges:
+    post:
+      summary: カスタマー 残高のチャージ
+      tags:
+        - charges
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            properties:
+              code:
+                type: string
+                description: serial code
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  id:
+                    type: integer
+              - properties:
+                  amount:
+                    type: integer
+              - properties:
+                  balance:
+                    type: integer
+              - properties:
+                  created_at:
+                    type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/customer/payments:
+    post:
+      summary: カスタマー 支払い
+      tags:
+        - payments
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            allOf:
+              - properties:
+                  payment_code:
+                    type: string
+              - properties:
+                  amount:
+                    type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  id:
+                    type: integer
+              - properties:
+                  amount:
+                    type: integer
+              - properties:
+                  balance:
+                    type: integer
+              - properties:
+                  vendor_name:
+                    type: string
+              - properties:
+                  created_at:
+                    type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/customer/transactions:
+    get:
+      summary: カスタマー 取引履歴の一覧の取得
+      tags:
+        - transactions
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            properties:
+              transactions:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    amount:
+                      type: integer
+                    balance:
+                      type: integer
+                    kind:
+                      type: string
+                    type:
+                      type: string
+                    vendor_name:
+                      type: string
+                    created_at:
+                      type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/vendor/auth/signup:
+    post:
+      summary: ベンダー サインアップ
+      tags:
+        - auth
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            allOf:
+              - properties:
+                  name:
+                    type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  name:
+                    type: string
+              - properties:
+                  payment_code:
+                    type: string
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/vendor/auth/signin:
+    post:
+      summary: ベンダー サインイン
+      tags:
+        - auth
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  name:
+                    type: string
+              - properties:
+                  payment_code:
+                    type: string
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/vendor/balance:
+    get:
+      summary: ベンダー 残高の取得
+      tags:
+        - balance
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  balance:
+                    type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/vendor/payments:
+    post:
+      summary: ベンダー 支払い
+      tags:
+        - payments
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            allOf:
+              - properties:
+                  code:
+                    type: string
+              - properties:
+                  amount:
+                    type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  id:
+                    type: integer
+              - properties:
+                  amount:
+                    type: integer
+              - properties:
+                  balance:
+                    type: integer
+              - properties:
+                  vendor_name:
+                    type: string
+              - properties:
+                  created_at:
+                    type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/vendor/transactions:
+    get:
+      summary: ベンダー 取引履歴の一覧の取得
+      tags:
+        - transactions
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            properties:
+              transactions:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    amount:
+                      type: integer
+                    balance:
+                      type: integer
+                    customer_name:
+                      type: string
+                    type:
+                      type: string
+                    created_at:
+                      type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
