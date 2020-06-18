@@ -3,8 +3,8 @@ services:
   swagger:
     image: swaggerapi/swagger-ui
     volumes:
-      - ./docs/api:/usr/share/nginx/html/api
+      - ./docs/swagger.yml:/usr/share/nginx/html/swagger.yml
     environment:
-      URLS: "[ { url: \"api/swagger.yml\", name: \"DePay API\" } ]"
+      URLS: "[ { url: \"swagger.yml\", name: \"DePay API\" } ]"
     ports:
       - "8080:8080"
