@@ -11,8 +11,9 @@ post:
       in: body
       required: true
       schema:
-        allOf:
-          - $ref: '../../../../models/common/customer.yml#/name'
+        properties:
+          name:
+            type: string
   responses:
     '200':
       description: OK

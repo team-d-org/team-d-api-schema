@@ -11,9 +11,11 @@ post:
       in: body
       required: true
       schema:
-        allOf:
-          - $ref: '../../../../models/common/customer_payment_code.yml#/code'
-          - $ref: '../../../../models/common/vendor_transaction.yml#/amount'
+        properties:
+          payment_code:
+            type: string
+          amount:
+            type: integer
   responses:
     '200':
       description: OK
