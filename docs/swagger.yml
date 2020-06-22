@@ -37,10 +37,9 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
+            properties:
+              name:
+                type: string
       responses:
         '200':
           description: OK
@@ -174,13 +173,11 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  payment_code:
-                    type: string
-              - properties:
-                  amount:
-                    type: integer
+            properties:
+              payment_code:
+                type: string
+              amount:
+                type: integer
       responses:
         '200':
           description: OK
@@ -269,10 +266,9 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
+            properties:
+              name:
+                type: string
       responses:
         '200':
           description: OK
@@ -367,13 +363,11 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  code:
-                    type: string
-              - properties:
-                  amount:
-                    type: integer
+            properties:
+              payment_code:
+                type: string
+              amount:
+                type: integer
       responses:
         '200':
           description: OK
