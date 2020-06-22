@@ -11,8 +11,10 @@ post:
       in: body
       required: true
       schema:
-        allOf:
-          - $ref: '../../../../models/common/vendor.yml#/name'
+        type: object
+        properties:
+          name:
+            type: string
   responses:
     '200':
       description: OK
