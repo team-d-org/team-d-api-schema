@@ -37,6 +37,7 @@ paths:
           in: body
           required: true
           schema:
+            type: object
             properties:
               name:
                 type: string
@@ -173,6 +174,7 @@ paths:
           in: body
           required: true
           schema:
+            type: object
             properties:
               payment_code:
                 type: string
@@ -266,6 +268,7 @@ paths:
           in: body
           required: true
           schema:
+            type: object
             properties:
               name:
                 type: string
@@ -363,8 +366,9 @@ paths:
           in: body
           required: true
           schema:
+            type: object
             properties:
-              payment_code:
+              code:
                 type: string
               amount:
                 type: integer
