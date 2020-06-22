@@ -11,6 +11,7 @@ post:
       in: body
       required: true
       schema:
+        type: object
         properties:
           payment_code:
             type: string
