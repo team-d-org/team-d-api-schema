@@ -210,9 +210,9 @@ paths:
           description: Internal Server Error.
         '502':
           description: Bad Gateway.
-  /v1/customer/payments/qr:
+  /v1/customer/payments/code:
     post:
-      summary: カスタマー QR作成
+      summary: カスタマー コード作成
       tags:
         - payments
       parameters:

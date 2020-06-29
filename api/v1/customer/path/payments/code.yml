@@ -1,5 +1,5 @@
 post:
-  summary: カスタマー QR作成
+  summary: カスタマー コード作成
   tags:
     - payments
   parameters:
