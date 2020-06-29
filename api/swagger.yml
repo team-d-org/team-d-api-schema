@@ -34,6 +34,8 @@ paths:
     $ref: './v1/customer/path/charges/index.yml'
   /v1/customer/payments:
     $ref: './v1/customer/path/payments/index.yml'
+  /v1/customer/payments/code:
+    $ref: './v1/customer/path/payments/code.yml'
   /v1/customer/transactions:
     $ref: './v1/customer/path/transactions/index.yml'
 # vendor

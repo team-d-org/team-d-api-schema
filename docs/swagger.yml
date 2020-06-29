@@ -210,6 +210,37 @@ paths:
           description: Internal Server Error.
         '502':
           description: Bad Gateway.
+  /v1/customer/payments/code:
+    post:
+      summary: カスタマー コード作成
+      tags:
+        - payments
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+              - properties:
+                  code:
+                    type: string
+              - properties:
+                  created_at:
+                    type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
   /v1/customer/transactions:
     get:
       summary: カスタマー 取引履歴の一覧の取得

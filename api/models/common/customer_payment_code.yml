@@ -3,6 +3,11 @@ code:
     code:
       type: string
 # unixtime
+expired_at:
+  properties:
+    created_at:
+      type: integer
+# unixtime
 created_at:
   properties:
     created_at:
