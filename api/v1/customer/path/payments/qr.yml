@@ -1,0 +1,26 @@
+post:
+  summary: カスタマー QR作成
+  tags:
+    - payments
+  parameters:
+    - name: X-Auth-Token
+      in: header
+      required: true
+      type: string
+  responses:
+    '200':
+      description: OK
+      schema:
+        allOf:
+          - $ref: '../../../../models/common/customer_payment_code.yml#/code'
+          - $ref: '../../../../models/common/customer_payment_code.yml#/expired_at'
+    '400':
+      $ref: '../../../../responses.yml#/400'
+    '401':
+      $ref: '../../../../responses.yml#/401'
+    '404':
+      $ref: '../../../../responses.yml#/404'
+    '500':
+      $ref: '../../../../responses.yml#/500'
+    '502':
+      $ref: '../../../../responses.yml#/502'
