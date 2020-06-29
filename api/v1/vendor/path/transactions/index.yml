@@ -20,7 +20,20 @@ get:
           transactions:
             type: array
             items:
-              $ref: '../../../../models/common/vendor_transaction.yml#/all'
+              type: object
+              properties:
+                id:
+                  type: integer
+                amount:
+                  type: integer
+                balance:
+                  type: integer
+                customer_name:
+                  type: string
+                type:
+                  type: string
+                created_at:
+                  type: integer
     '400':
       $ref: '../../../../responses.yml#/400'
     '401':

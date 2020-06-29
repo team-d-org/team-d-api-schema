@@ -19,8 +19,10 @@ post:
     '200':
       description: OK
       schema:
-        allOf:
-          - $ref: '../../../../models/common/customer.yml#/name'
+        type: object
+        properties:
+          name:
+            type: string
     '400':
       $ref: '../../../../responses.yml#/400'
     '401':

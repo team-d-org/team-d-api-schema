@@ -19,11 +19,16 @@ post:
     '200':
       description: OK
       schema:
-        allOf:
-          - $ref: '../../../../models/common/customer_transaction.yml#/id'
-          - $ref: '../../../../models/common/customer_transaction.yml#/amount'
-          - $ref: '../../../../models/common/customer_transaction.yml#/balance'
-          - $ref: '../../../../models/common/customer_transaction.yml#/created_at'
+        type: object
+        properties:
+          id:
+            type: integer
+          amount:
+            type: integer
+          balance:
+            type: integer
+          created_at:
+            type: integer
     '400':
       $ref: '../../../../responses.yml#/400'
     '401':
