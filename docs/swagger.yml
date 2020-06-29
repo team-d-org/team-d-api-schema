@@ -220,6 +220,11 @@ paths:
           in: header
           required: true
           type: string
+        - name: after
+          in: path
+          required: true
+          description: Transaction ID
+          type: integer
       responses:
         '200':
           description: OK
@@ -412,6 +417,11 @@ paths:
           in: header
           required: true
           type: string
+        - name: after
+          in: path
+          required: true
+          description: Transaction ID
+          type: integer
       responses:
         '200':
           description: OK
