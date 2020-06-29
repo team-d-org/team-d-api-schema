@@ -11,9 +11,12 @@ post:
     '200':
       description: OK
       schema:
-        allOf:
-          - $ref: '../../../../models/common/customer_payment_code.yml#/code'
-          - $ref: '../../../../models/common/customer_payment_code.yml#/expired_at'
+        type: object
+        properties:
+          code:
+            type: string
+          expired_at:
+            type: integer
     '400':
       $ref: '../../../../responses.yml#/400'
     '401':
