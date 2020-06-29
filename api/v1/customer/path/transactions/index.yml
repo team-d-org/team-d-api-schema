@@ -7,6 +7,11 @@ get:
       in: header
       required: true
       type: string
+    - name: after
+      in: query
+      required: false
+      description: Transaction ID
+      type: integer
   responses:
     '200':
       description: OK
@@ -15,7 +20,22 @@ get:
           transactions:
             type: array
             items:
-              $ref: '../../../../models/common/customer_transaction.yml#/all'
+              type: object
+              properties:
+                id:
+                  type: integer
+                amount:
+                  type: integer
+                balance:
+                  type: integer
+                kind:
+                  type: string
+                type:
+                  type: string
+                vendor_name:
+                  type: string
+                created_at:
+                  type: integer
     '400':
       $ref: '../../../../responses.yml#/400'
     '401':

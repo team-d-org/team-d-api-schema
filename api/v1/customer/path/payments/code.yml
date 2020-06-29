@@ -1,33 +1,21 @@
 post:
-  summary: カスタマー 残高のチャージ
+  summary: カスタマー コード作成
   tags:
-    - charges
+    - payments
   parameters:
     - name: X-Auth-Token
       in: header
       required: true
       type: string
-    - name: body
-      in: body
-      required: true
-      schema:
-        properties:
-          code:
-            type: string
-            description: 'serial code'
   responses:
     '200':
       description: OK
       schema:
         type: object
         properties:
-          id:
-            type: integer
-          amount:
-            type: integer
-          balance:
-            type: integer
-          created_at:
+          code:
+            type: string
+          expired_at:
             type: integer
     '400':
       $ref: '../../../../responses.yml#/400'

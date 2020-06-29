@@ -37,18 +37,18 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
+            type: object
+            properties:
+              name:
+                type: string
       responses:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
+            type: object
+            properties:
+              name:
+                type: string
         '400':
           description: Bad request.
         '401':
@@ -73,10 +73,10 @@ paths:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
+            type: object
+            properties:
+              name:
+                type: string
         '400':
           description: Bad request.
         '401':
@@ -101,10 +101,10 @@ paths:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  balance:
-                    type: integer
+            type: object
+            properties:
+              balance:
+                type: integer
         '400':
           description: Bad request.
         '401':
@@ -137,19 +137,16 @@ paths:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  id:
-                    type: integer
-              - properties:
-                  amount:
-                    type: integer
-              - properties:
-                  balance:
-                    type: integer
-              - properties:
-                  created_at:
-                    type: integer
+            type: object
+            properties:
+              id:
+                type: integer
+              amount:
+                type: integer
+              balance:
+                type: integer
+              created_at:
+                type: integer
         '400':
           description: Bad request.
         '401':
@@ -174,33 +171,58 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  payment_code:
-                    type: string
-              - properties:
-                  amount:
-                    type: integer
+            type: object
+            properties:
+              payment_code:
+                type: string
+              amount:
+                type: integer
       responses:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  id:
-                    type: integer
-              - properties:
-                  amount:
-                    type: integer
-              - properties:
-                  balance:
-                    type: integer
-              - properties:
-                  vendor_name:
-                    type: string
-              - properties:
-                  created_at:
-                    type: integer
+            type: object
+            properties:
+              id:
+                type: integer
+              amount:
+                type: integer
+              balance:
+                type: integer
+              vendor_name:
+                type: string
+              created_at:
+                type: integer
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '500':
+          description: Internal Server Error.
+        '502':
+          description: Bad Gateway.
+  /v1/customer/payments/code:
+    post:
+      summary: カスタマー コード作成
+      tags:
+        - payments
+      parameters:
+        - name: X-Auth-Token
+          in: header
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              code:
+                type: string
+              expired_at:
+                type: integer
         '400':
           description: Bad request.
         '401':
@@ -221,6 +243,11 @@ paths:
           in: header
           required: true
           type: string
+        - name: after
+          in: query
+          required: false
+          description: Transaction ID
+          type: integer
       responses:
         '200':
           description: OK
@@ -269,21 +296,20 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
+            type: object
+            properties:
+              name:
+                type: string
       responses:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
-              - properties:
-                  payment_code:
-                    type: string
+            type: object
+            properties:
+              name:
+                type: string
+              payment_code:
+                type: string
         '400':
           description: Bad request.
         '401':
@@ -308,13 +334,12 @@ paths:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  name:
-                    type: string
-              - properties:
-                  payment_code:
-                    type: string
+            type: object
+            properties:
+              name:
+                type: string
+              payment_code:
+                type: string
         '400':
           description: Bad request.
         '401':
@@ -339,10 +364,10 @@ paths:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  balance:
-                    type: integer
+            type: object
+            properties:
+              balance:
+                type: integer
         '400':
           description: Bad request.
         '401':
@@ -367,33 +392,28 @@ paths:
           in: body
           required: true
           schema:
-            allOf:
-              - properties:
-                  code:
-                    type: string
-              - properties:
-                  amount:
-                    type: integer
+            type: object
+            properties:
+              code:
+                type: string
+              amount:
+                type: integer
       responses:
         '200':
           description: OK
           schema:
-            allOf:
-              - properties:
-                  id:
-                    type: integer
-              - properties:
-                  amount:
-                    type: integer
-              - properties:
-                  balance:
-                    type: integer
-              - properties:
-                  vendor_name:
-                    type: string
-              - properties:
-                  created_at:
-                    type: integer
+            type: object
+            properties:
+              id:
+                type: integer
+              amount:
+                type: integer
+              balance:
+                type: integer
+              customer_name:
+                type: string
+              created_at:
+                type: integer
         '400':
           description: Bad request.
         '401':
@@ -414,6 +434,11 @@ paths:
           in: header
           required: true
           type: string
+        - name: after
+          in: query
+          required: false
+          description: Transaction ID
+          type: integer
       responses:
         '200':
           description: OK

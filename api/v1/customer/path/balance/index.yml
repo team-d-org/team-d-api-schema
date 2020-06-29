@@ -11,8 +11,10 @@ get:
     '200':
       description: OK
       schema:
-        allOf:
-          - $ref: '../../../../models/common/customer.yml#/balance'
+        type: object
+        properties:
+          balance:
+            type: integer
     '400':
       $ref: '../../../../responses.yml#/400'
     '401':
