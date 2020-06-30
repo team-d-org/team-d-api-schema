@@ -16,26 +16,24 @@ get:
     '200':
       description: OK
       schema:
-        properties:
-          transactions:
-            type: array
-            items:
-              type: object
-              properties:
-                id:
-                  type: integer
-                amount:
-                  type: integer
-                balance:
-                  type: integer
-                kind:
-                  type: string
-                type:
-                  type: string
-                vendor_name:
-                  type: string
-                created_at:
-                  type: integer
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+            amount:
+              type: integer
+            balance:
+              type: integer
+            kind:
+              type: string
+            type:
+              type: string
+            vendor_name:
+              type: string
+            created_at:
+              type: integer
     '400':
       $ref: '../../../../responses.yml#/400'
     '401':
