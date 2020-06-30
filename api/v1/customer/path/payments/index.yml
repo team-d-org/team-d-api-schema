@@ -13,6 +13,8 @@ post:
       schema:
         type: object
         properties:
+          transaction_id:
+            type: string
           payment_code:
             type: string
           amount:
@@ -25,6 +27,8 @@ post:
         properties:
           id:
             type: integer
+          transaction_id:
+            type: string
           amount:
             type: integer
           balance:

@@ -173,6 +173,8 @@ paths:
           schema:
             type: object
             properties:
+              transaction_id:
+                type: string
               payment_code:
                 type: string
               amount:
@@ -185,6 +187,8 @@ paths:
             properties:
               id:
                 type: integer
+              transaction_id:
+                type: string
               amount:
                 type: integer
               balance:
@@ -394,6 +398,8 @@ paths:
           schema:
             type: object
             properties:
+              transaction_id:
+                type: string
               code:
                 type: string
               amount:
@@ -406,6 +412,8 @@ paths:
             properties:
               id:
                 type: integer
+              transaction_id:
+                type: string
               amount:
                 type: integer
               balance:
