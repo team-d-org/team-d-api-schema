@@ -173,6 +173,8 @@ paths:
           schema:
             type: object
             properties:
+              transaction_id:
+                type: string
               payment_code:
                 type: string
               amount:
@@ -185,6 +187,8 @@ paths:
             properties:
               id:
                 type: integer
+              transaction_id:
+                type: string
               amount:
                 type: integer
               balance:
@@ -252,26 +256,24 @@ paths:
         '200':
           description: OK
           schema:
-            properties:
-              transactions:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    amount:
-                      type: integer
-                    balance:
-                      type: integer
-                    kind:
-                      type: string
-                    type:
-                      type: string
-                    vendor_name:
-                      type: string
-                    created_at:
-                      type: integer
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                amount:
+                  type: integer
+                balance:
+                  type: integer
+                kind:
+                  type: string
+                type:
+                  type: string
+                vendor_name:
+                  type: string
+                created_at:
+                  type: integer
         '400':
           description: Bad request.
         '401':
@@ -394,6 +396,8 @@ paths:
           schema:
             type: object
             properties:
+              transaction_id:
+                type: string
               code:
                 type: string
               amount:
@@ -406,6 +410,8 @@ paths:
             properties:
               id:
                 type: integer
+              transaction_id:
+                type: string
               amount:
                 type: integer
               balance:
@@ -443,24 +449,22 @@ paths:
         '200':
           description: OK
           schema:
-            properties:
-              transactions:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    amount:
-                      type: integer
-                    balance:
-                      type: integer
-                    customer_name:
-                      type: string
-                    type:
-                      type: string
-                    created_at:
-                      type: integer
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                amount:
+                  type: integer
+                balance:
+                  type: integer
+                customer_name:
+                  type: string
+                type:
+                  type: string
+                created_at:
+                  type: integer
         '400':
           description: Bad request.
         '401':
